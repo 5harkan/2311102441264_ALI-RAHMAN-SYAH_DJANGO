@@ -48,4 +48,35 @@ source .venv/bin/activate
 
 ```shell
 pip install django
+pip install mysqlclient
+pip install pillow
 ```
+
+## Update MariaDB pada XAMPP
+
+Update mariadb XAMMP kalian ke versi terbaru, berikut cara update-nya:
+
+1. Download MaridDB di https://mariadb.org/download/?t=mariadb&o=true&p=mariadb&r=11.7.2&os=windows&cpu=x86_64&pkg=zip&mirror=citrahost, pastikan file download berekstensi ```.zip```
+
+2. Ekstrak file, kemudian masuk kedalam folder dan ubah nama folder didalamnya menjadi ```mysql```
+
+3. Copy folder ```mysql``` ke dalam folder instalasi XAMMP, sebelum kalian copy ubah nama folder ```mysql``` bawaan menjadi ```mysql_old``` dan copy ```mysql``` yang baru kedalam path xammp
+
+4. Copy file dibawah ini dari folder ```mysql_old``` ke ```mysql```
+```commandline
+mysql_uninstallservice
+mysql_installservice
+data
+scripts
+```
+kemudian copy juga file ```my.ini``` yang terdapat pada folder ```"mysql_old\bin"``` ke dalam ```mysql\bin```
+
+5. Setelah itu kita masuk ke ```mysql\data``` hapus semua file dan folder didalamnya, dan copy kembali 4 folder yang berada di ```mysql\backup``` kedalam ```mysql\data```. Berikut nama folder yang di copy:
+```commandline
+mysql
+performance_schema
+phpmyadmin
+test
+```
+Setelah melakukan step by step diatas selanjutnya kita buka Xammp dan aktifkan Apache serta Mysql.
+itu tadi cara update MariaDB.
