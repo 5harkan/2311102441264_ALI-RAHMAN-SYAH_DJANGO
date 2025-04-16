@@ -80,3 +80,19 @@ test
 ```
 Setelah melakukan step by step diatas selanjutnya kita buka Xammp dan aktifkan Apache serta Mysql.
 itu tadi cara update MariaDB.
+
+## Template
+Terdapat beberapa template yang bisa digunakan:
+https://drive.google.com/drive/u/2/folders/1kc_3tA5MZI-abi9G-GvLwXUkS_M95O2v
+
+1. Download template, disini saya menggunakan template ```Material.zip```
+2. File yang sudah diunduh dapat di ekstrak dan kemudian isi dari file tersebut di pindahkan kedalam folder ```static```  pada project
+3. Buat folder public pada direktori template.
+3. Pilih bagian dari template yang mau kita jadikan ```base``` dari halaman public kita
+4. Copy ```source code``` template ke ```base.html``` pada direktori ```template/public```
+5. Setelah itu kita bisa menyesuaikan path css pada file ```base.html```. Kita bisa replace beberapa katakunci dengan kata kunci di bawah ini:
+```commandline
+(href|src)="([^"]+\.(?:css|js|jpe?g|jpeg|png|svg))"
+$1="{% static '$2' %}"
+```
+jangan lupa hapus NBSP.

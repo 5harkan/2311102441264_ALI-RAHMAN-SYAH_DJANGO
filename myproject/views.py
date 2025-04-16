@@ -2,17 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    template_name = 'home.html'
+    template_name = 'public/base.html'
     context = {
         'title':'my home',
         'welcome':'welcome my home',
-    }
-    return render(request, template_name, context)
-
-def about(request):
-    template_name = 'about.html'
-    context = {
-        'title':'about me',
-        'welcome':'this is about myself',
     }
     return render(request, template_name, context)
