@@ -96,3 +96,9 @@ https://drive.google.com/drive/u/2/folders/1kc_3tA5MZI-abi9G-GvLwXUkS_M95O2v
 $1="{% static '$2' %}"
 ```
 jangan lupa hapus NBSP.
+
+## CRUD IS HERE
+1. Menambahkan CRUD pada Django Apps berita
+2. memperbarui codingan pada public dan menambahkan Dashboard untuk keperluan CRUD
+
+i will update the README soon :D
