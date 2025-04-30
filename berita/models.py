@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import CharField
+
+
 # Create your models here.
 class Kategori(models.Model):
     nama    = models.CharField(max_length=100)
